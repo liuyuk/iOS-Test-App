@@ -10,6 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var Headerlabel: UILabel!
+
+    @IBOutlet weak var usernameField: UITextField!
+    
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var message: UILabel!
+    
+    @IBAction func ButtonClicked(_ sender: Any) {
+        print ("My Button is Clicked")
+        let username = usernameField.text
+        let password = passwordField.text
+        
+        if (username != "" && password != "") {
+            message.text = "Login Successful!"
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
